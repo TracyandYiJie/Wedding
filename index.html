@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Orientation</title>
+  <script>
+    function updateBasedOnDimensions() {
+      // Get the current dimensions
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      // Define URLs for landscape and portrait
+      const landscapeURL = "https://tracyandyijie.github.io/Wedding-Landscape/";
+      const portraitURL = "https://tracyandyijie.github.io/Wedding-Portrait/";
+
+      // Redirect based on dimensions
+      if (width > height) {
+        // Landscape mode
+        window.location.href = landscapeURL;
+      } else {
+        // Portrait mode
+        window.location.href = portraitURL;
+      }
+    }
+
+    // Check on page load
+    window.onload = updateBasedOnDimensions;
+
+    // Check when the window is resized
+    window.addEventListener("resize", updateBasedOnDimensions);
+  </script>
+</head>
+<body>
+  <p>Redirecting based on screen dimensions...</p>
+</body>
+</html>
